@@ -13,7 +13,7 @@ const Cart = () => {
         mail: ''
     })
 
-    const {carList, BorrarItemCarrito, precioTotal, CantidadProd,borrarCarrito} = useCartContext() 
+    const {carList, borrarItemCarrito, precioTotal, cantidadProd,borrarCarrito} = useCartContext() 
 
     function cambioFormulario (e) {
 
@@ -60,9 +60,9 @@ const Cart = () => {
                         <div className='detallesCarrito'>
                             <img src = {Item.itemCart.portada} className='imagenDetalle' alt='portada'></img>
                             <p>Precio unitario: $ {Item.itemCart.precio}</p>
-                            <p>Unidades: { CantidadProd(Item) }</p>  
-                            <p>SubTotal: $ { (CantidadProd(Item))*(Item.itemCart.precio) }</p>
-                            <button onClick={()=>BorrarItemCarrito(Item)} >ELIMINAR</button>
+                            <p>Unidades: { cantidadProd(Item) }</p>  
+                            <p>SubTotal: $ { (cantidadProd(Item))*(Item.itemCart.precio) }</p>
+                            <button onClick={()=>borrarItemCarrito(Item)} >ELIMINAR</button>
                         </div>   
                     </th>
                 </div>)}
