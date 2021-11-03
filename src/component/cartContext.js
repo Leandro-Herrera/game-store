@@ -18,18 +18,18 @@ export default function CartContextProvider ({children}){
         }
     }
 
-    const BorrarItemCarrito = (DatoCarrito2) =>{
+    const borrarItemCarrito = (DatoCarrito2) =>{
         const BorrarProd = carList.filter((prod) => prod.itemCart.id !== DatoCarrito2.itemCart.id);
         setCarList([...BorrarProd])
     }
-    const AcumuladorCart =()=>{
+    const acumuladorCart =()=>{
         return carList.reduce((acumulador, Valor) => acumulador + Valor.Cantidad, 0)
     }
     const precioTotal = () =>{
        
         return carList.reduce((acumulador, Valor)=>(acumulador + (Valor.Cantidad * Valor.itemCart.precio)), 0)
     }
-    const CantidadProd =(DatoCarrito)=>{
+    const cantidadProd =(DatoCarrito)=>{
         return DatoCarrito.Cantidad
     }
 
@@ -40,9 +40,9 @@ export default function CartContextProvider ({children}){
         <cartContext.Provider value={{
             carList,
             addToCart,
-            BorrarItemCarrito,
-            AcumuladorCart,
-            CantidadProd,
+            borrarItemCarrito,
+            acumuladorCart,
+            cantidadProd,
             borrarCarrito,
             precioTotal
             }}>

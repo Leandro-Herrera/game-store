@@ -26,4 +26,4 @@ const ItemDetail = ({DetalleJuego})  =>  {
         </div>
     )
 }
-export default ItemDetail
+export default ItemDetail;

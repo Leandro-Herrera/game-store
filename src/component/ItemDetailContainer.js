@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import ItemDetail from '../component/ItemDetail';
-
 import { getFirestore } from '../service/getFirebase';
 
-
 function ItemDetailContainer () {
+
     const [DetalleJuego, setDetalleJuego] = useState([])
     const [cargando, setCargando] = useState(true)
-    const { idItem } = useParams() 
+    const { idItem } = useParams()
 
     useEffect(()=>{
 
@@ -31,14 +30,18 @@ function ItemDetailContainer () {
             .finally(()=>setCargando(false))
         }
 
- }, [ idItem ])
+    }, [ idItem ])
  
-
     return(
         <div>
-          { cargando ? <h2 className='cardNombre'>CARGANDO...</h2> : DetalleJuego &&  <ItemDetail key={DetalleJuego} DetalleJuego={DetalleJuego} />}
-        
+          { cargando 
+          ? 
+        <h2 className='cardNombre'>CARGANDO...</h2>
+           :
+        DetalleJuego &&  <ItemDetail key={DetalleJuego} DetalleJuego={DetalleJuego} />
+        }
         </div>
     )
 }
-export default ItemDetailContainer
+
+export default ItemDetailContainer;

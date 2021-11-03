@@ -1,6 +1,5 @@
 import { createContext } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'; // PARA IMPORTAR EL ENRUTADO
-
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'; 
 import './App.css';
 import ItemListContainer from '../src/component/ItemListContainer';
 import NavBar from './component/NavBar';
@@ -10,7 +9,7 @@ import CartContextProvider from './component/cartContext';
 
 
 
-export const contextApp = createContext('Dato') //para crear un contexto y saltear la regla de unidireccional- por defecto va a inicializar con el valor de dato
+export const contextApp = createContext('Dato') 
 
 function App (){
 

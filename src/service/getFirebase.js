@@ -1,3 +1,4 @@
+
 import firebase from "firebase";
 import 'firebase/firestore'
 
@@ -8,10 +9,10 @@ const firebaseConfig = {
     storageBucket: "store-game-proyecto-react.appspot.com",
     messagingSenderId: "419814538162",
     appId: "1:419814538162:web:09b4cb1470d54a930082ab"
-  };
+};
 
-  const app = firebase.initializeApp(firebaseConfig)
+const app = firebase.initializeApp(firebaseConfig)
 
-  export function getFirestore(){
-      return firebase.firestore(app)
-  }
+export function getFirestore(){
+    return firebase.firestore(app)
+}

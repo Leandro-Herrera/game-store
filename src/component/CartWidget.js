@@ -1,4 +1,3 @@
-
 import carrito from '../img/carrito.png';
 
 const CartWidget = () => {
@@ -10,4 +9,4 @@ const CartWidget = () => {
         </>
     )
 }
-export default CartWidget
+export default CartWidget;

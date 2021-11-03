@@ -9,4 +9,4 @@ import Item from "./Item"
         </>
     )
 }
-export default ItemList
+export default ItemList;
